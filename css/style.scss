@@ -1,0 +1,440 @@
+@font-face {
+    font-family: Azo;
+    src: url(../assets/fonts/AzoSans-Regular.woff);
+}
+@font-face {
+    font-family: Azo-Bold;
+    src: url(../assets/fonts/AzoSans-Bold.woff);
+}
+@font-face {
+    font-family: Azo-Light;
+    src: url(../assets/fonts/AzoSans-Light.woff);
+}
+
+// font-family: 'Exo', sans-serif; 500 y 700
+
+
+/******************************************* COLORES *******************************************/
+
+$negro: #131313;
+$blanco: #ffffff;
+$naranja: #E29544;
+$light: #F8EAD4;
+
+/******************************************* BASE *******************************************/
+
+* {
+    margin: 0;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+.btn-naranja {
+    padding: 15px 30px !important;
+    background-color: $naranja !important;
+    color: $blanco !important;
+    font-family: 'Exo' !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    text-transform: uppercase;
+}
+
+/******************************************* HERO *******************************************/
+
+#hero {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 52.6%, #000000 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/images/hero.png);
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    h1 {
+        max-width: 900px;
+        font-family: 'Exo';
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(40px, 7vw, 100px);
+        line-height: 100%;
+        text-align: center;
+        color: $blanco;
+        mix-blend-mode: overlay;
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .go_down {
+        position: absolute;
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        bottom: 150px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        
+        span {
+            color: $blanco;
+            font-family: 'Azo-Bold';
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+    }
+
+    @media (max-width: 991.98px){
+        .go_down {
+            bottom: 120px;
+            right: -85px;
+
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media (max-width: 1199.98px){
+        .go_down {
+            right: -70px;
+        }
+    }
+
+    @supports (-webkit-touch-callout: none) {
+        span {
+            padding-left: 20px;
+        }
+      }
+}
+
+.gsap_body {
+    height: 100vh;
+    background-color: black;
+}
+
+/******************************************* NOSOTROS *******************************************/
+
+#nosotros {
+    padding: 120px 0;
+    margin-top: -80vh;
+    min-height: 50vh;
+    text-align: center;
+
+    h2 {
+        color: $blanco;
+        text-align: center;
+        font-family: 'Exo';
+        font-weight: 500;
+        font-size: clamp(22px, 2vw, 30px);
+        line-height: 40px;
+        max-width: 1000px;
+        margin: auto;
+        padding: 0 25px;
+
+        b {
+            color: $naranja;
+            font-weight: 500;
+            background-color: #000000;
+            padding: 0 5px;
+        }
+    }
+
+    .btn-naranja {
+        margin-top: 30px;
+    }
+}
+
+/******************************************* SERVICIOS *******************************************/
+
+#servicios {
+    padding: 120px 0;
+
+    h3 {
+        font-family: 'Exo';
+        font-weight: 700;
+        font-size: 40px;
+        text-transform: uppercase;
+        color: $naranja
+    }
+
+    p {
+        font-family: 'Azo-Light';
+        font-size: 16px;
+        line-height: 19px;
+        color: $negro;
+    }
+
+    .accordion-item {
+        border: 0;
+    }
+
+    .accordion-button {
+        font-family: 'Azo-Bold';
+        font-size: 20px;
+        color: $negro;
+        padding: 16px 0;
+    }
+
+    .accordion-button:not(.collapsed) {
+        color: $naranja;
+        background-color: $blanco;
+        box-shadow: none;
+    }
+
+    .accordion-body {
+        color: $negro;
+        font-family: 'Azo-Light';
+        font-size: 16px;
+        padding: 16px 0;
+    }
+
+    .accordion-button:focus {
+        border: 0;
+        box-shadow: none;
+    }
+
+    .mapdiv {
+        position: relative;
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    .map {
+        width: 100%;
+    }
+
+    h4 {
+        font-family: 'Exo';
+        font-weight: 700;
+        font-size: 80px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $naranja;
+    }
+    .p_facts {
+        max-width: 215px;
+        margin: auto;
+        text-align: center;
+        color: $negro;
+        font-family: 'Azo';
+    }
+    .facts {
+        margin-bottom: 40px;
+    }
+
+    @media only screen and (orientation: portrait) {
+        .facts {
+            margin-bottom: 0;
+        }
+        .p_facts {
+            margin-bottom: 30px;
+        }
+
+    }
+
+    @keyframes pulse {
+        from {
+          stroke-width: 3px;
+          stroke-opacity: 1;
+          transform: scale(0.3);
+        }
+        to {
+          stroke-width: 0;
+          stroke-opacity: 0;
+          transform: scale(2);
+        }
+    }
+}
+
+
+/******************************************* CLIENTES *******************************************/
+
+#clientes {
+    padding: 120px 0;
+    h3 {
+        font-family: 'Exo';
+        font-weight: 700;
+        font-size: 32px;
+        text-transform: uppercase;
+        color: $negro;
+        text-align: center;
+        padding: 0 25px;
+        margin-bottom: 50px;
+
+        b {
+            color: $naranja;
+            font-weight: 700;
+            background-color: #000000;
+            padding: 0 8px;
+        }
+    }
+    $animationSpeed: 40s;
+
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-250px * 7))}
+    }
+
+    .slider {
+        height: 100px;
+        margin: auto;
+        overflow:hidden;
+        position: relative;
+        width: auto;
+        
+        .slide-track {
+            animation: scroll $animationSpeed linear infinite;
+            display: flex;
+            width: calc(250px * 14);
+        }
+        .slide {
+            height: 100px;
+            width: 250px;
+        }
+    }
+}
+
+
+/******************************************* BANNER *******************************************/
+
+
+#banner {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #131313 97.02%), url(../assets/images/contact.png);
+    min-height: 570px;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $blanco;
+
+    h4 {
+        font-family: 'Azo';
+        font-size: clamp(20px, 3vw, 30px);
+    }
+
+    h3 {
+        font-family: 'Azo-Bold';
+        font-size: clamp(26px, 3vw, 36px);
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    #banner {
+        justify-content: flex-end;
+        padding-bottom: 70px;
+    }
+}
+
+
+/******************************************* FOOTER *******************************************/
+
+#footer {
+    background-color: $negro;
+    padding: 10vh 0;
+    position: relative;
+
+    .col-12 {
+        position: relative;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .middle {
+        h3 {
+            font-family: 'Azo-Bold';
+            font-size: clamp(22px, 3vw, 30px);
+            color: white;
+            line-height: 140%;
+            margin-bottom: 80px;
+        }
+
+        a {
+            font-family: 'Azo';
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            padding-bottom: 2px;
+            border-bottom: 1px solid white;
+            line-height: 60px;
+        }
+    }
+
+    .last {
+        div {
+            a {
+                font-family: 'Azo';
+                font-size: 16px;
+                color: white;
+                text-decoration: none;
+                line-height: 40px;
+            }
+        }
+    }
+
+    p {
+        font-family: 'Azo-Light';
+        font-size: 13px;
+        color: white;
+        margin-bottom: 0;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    #footer {
+        text-align: center;
+
+        .col-12 {
+            padding: 0 0 30px;
+        }
+
+        .middle {
+            h3 {
+                margin-bottom: 10px;
+                padding: 0 10vw;
+            }
+    
+            a {
+                font-family: 'Azo';
+                font-size: 18px;
+                color: white;
+                text-decoration: none;
+                padding-bottom: 2px;
+                border-bottom: 1px solid white;
+                line-height: 40px;
+            }
+        }
+        .last {
+            .col-12 {
+                padding-bottom: 0;
+            }
+            div {
+                a {
+                    font-family: 'Azo';
+                    font-size: 16px;
+                    color: white;
+                    text-decoration: none;
+                    line-height: 40px;
+                }
+            }
+        }
+
+        p {
+            padding-top: 20px;
+            width: 100vw;
+        }
+    }
+}

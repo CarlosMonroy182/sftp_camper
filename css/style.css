@@ -1,0 +1,468 @@
+@font-face {
+  font-family: Azo;
+  src: url(../assets/fonts/AzoSans-Regular.woff);
+}
+
+@font-face {
+  font-family: Azo-Bold;
+  src: url(../assets/fonts/AzoSans-Bold.woff);
+}
+
+@font-face {
+  font-family: Azo-Light;
+  src: url(../assets/fonts/AzoSans-Light.woff);
+}
+
+/******************************************* COLORES *******************************************/
+/******************************************* BASE *******************************************/
+* {
+  margin: 0;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+.btn-naranja {
+  padding: 15px 30px !important;
+  background-color: #E29544 !important;
+  color: #ffffff !important;
+  font-family: 'Exo' !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  text-transform: uppercase;
+}
+
+/******************************************* HERO *******************************************/
+#hero {
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(52.6%, rgba(0, 0, 0, 0)), to(#000000)), -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../assets/images/hero.png);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 52.6%, #000000 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../assets/images/hero.png);
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+#hero h1 {
+  max-width: 900px;
+  font-family: 'Exo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(40px, 7vw, 100px);
+  line-height: 100%;
+  text-align: center;
+  color: #ffffff;
+  mix-blend-mode: overlay;
+  margin: 0;
+  padding: 0 10px;
+}
+
+#hero .go_down {
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  bottom: 150px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+#hero .go_down span {
+  color: #ffffff;
+  font-family: 'Azo-Bold';
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+@media (max-width: 991.98px) {
+  #hero .go_down {
+    bottom: 120px;
+    right: -85px;
+  }
+  #hero .go_down span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #hero .go_down {
+    right: -70px;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  #hero span {
+    padding-left: 20px;
+  }
+}
+
+.gsap_body {
+  height: 100vh;
+  background-color: black;
+}
+
+/******************************************* NOSOTROS *******************************************/
+#nosotros {
+  padding: 120px 0;
+  margin-top: -80vh;
+  min-height: 50vh;
+  text-align: center;
+}
+
+#nosotros h2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Exo';
+  font-weight: 500;
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 40px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+#nosotros h2 b {
+  color: #E29544;
+  font-weight: 500;
+  background-color: #000000;
+  padding: 0 5px;
+}
+
+#nosotros .btn-naranja {
+  margin-top: 30px;
+}
+
+/******************************************* SERVICIOS *******************************************/
+#servicios {
+  padding: 120px 0;
+}
+
+#servicios h3 {
+  font-family: 'Exo';
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #E29544;
+}
+
+#servicios p {
+  font-family: 'Azo-Light';
+  font-size: 16px;
+  line-height: 19px;
+  color: #131313;
+}
+
+#servicios .accordion-item {
+  border: 0;
+}
+
+#servicios .accordion-button {
+  font-family: 'Azo-Bold';
+  font-size: 20px;
+  color: #131313;
+  padding: 16px 0;
+}
+
+#servicios .accordion-button:not(.collapsed) {
+  color: #E29544;
+  background-color: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#servicios .accordion-body {
+  color: #131313;
+  font-family: 'Azo-Light';
+  font-size: 16px;
+  padding: 16px 0;
+}
+
+#servicios .accordion-button:focus {
+  
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#servicios .mapdiv {
+  position: relative;
+}
+
+#servicios .mapdiv svg {
+  width: 100%;
+}
+
+#servicios .map {
+  width: 100%;
+}
+
+#servicios h4 {
+  font-family: 'Exo';
+  font-weight: 700;
+  font-size: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #E29544;
+}
+
+#servicios .p_facts {
+  max-width: 215px;
+  margin: auto;
+  text-align: center;
+  color: #131313;
+  font-family: 'Azo';
+}
+
+#servicios .facts {
+  margin-bottom: 40px;
+}
+
+@media only screen and (orientation: portrait) {
+  #servicios .facts {
+    margin-bottom: 0;
+  }
+  #servicios .p_facts {
+    margin-bottom: 30px;
+  }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    stroke-width: 3px;
+    stroke-opacity: 1;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  to {
+    stroke-width: 0;
+    stroke-opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+@keyframes pulse {
+  from {
+    stroke-width: 3px;
+    stroke-opacity: 1;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  to {
+    stroke-width: 0;
+    stroke-opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+/******************************************* CLIENTES *******************************************/
+#clientes {
+  padding: 120px 0;
+}
+
+#clientes h3 {
+  font-family: 'Exo';
+  font-weight: 700;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #131313;
+  text-align: center;
+  padding: 0 25px;
+  margin-bottom: 50px;
+}
+
+#clientes h3 b {
+  color: #E29544;
+  font-weight: 700;
+  background-color: #000000;
+  padding: 0 8px;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+#clientes .slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+#clientes .slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+#clientes .slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+/******************************************* BANNER *******************************************/
+#banner {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(97.02%, #131313)), url(../assets/images/contact.png);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #131313 97.02%), url(../assets/images/contact.png);
+  min-height: 570px;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+}
+
+#banner h4 {
+  font-family: 'Azo';
+  font-size: clamp(20px, 3vw, 30px);
+}
+
+#banner h3 {
+  font-family: 'Azo-Bold';
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+@media only screen and (orientation: portrait) {
+  #banner {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-bottom: 70px;
+  }
+}
+
+/******************************************* FOOTER *******************************************/
+#footer {
+  background-color: #131313;
+  padding: 10vh 0;
+  position: relative;
+}
+
+#footer .col-12 {
+  position: relative;
+}
+
+#footer .logo {
+  width: 120px;
+}
+
+#footer .middle h3 {
+  font-family: 'Azo-Bold';
+  font-size: clamp(22px, 3vw, 30px);
+  color: white;
+  line-height: 140%;
+  margin-bottom: 80px;
+}
+
+#footer .middle a {
+  font-family: 'Azo';
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid white;
+  line-height: 60px;
+}
+
+#footer .last div a {
+  font-family: 'Azo';
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+#footer p {
+  font-family: 'Azo-Light';
+  font-size: 13px;
+  color: white;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (orientation: portrait) {
+  #footer {
+    text-align: center;
+  }
+  #footer .col-12 {
+    padding: 0 0 30px;
+  }
+  #footer .middle h3 {
+    margin-bottom: 10px;
+    padding: 0 10vw;
+  }
+  #footer .middle a {
+    font-family: 'Azo';
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid white;
+    line-height: 40px;
+  }
+  #footer .last .col-12 {
+    padding-bottom: 0;
+  }
+  #footer .last div a {
+    font-family: 'Azo';
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+  }
+  #footer p {
+    padding-top: 20px;
+    width: 100vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */
